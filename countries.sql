@@ -4,6 +4,7 @@ CREATE DATABASE IF NOT EXISTS comp_1006_lesson_03;
 use comp_1006_lesson_03;
 
 
+
 -- create the countries table 
 create table if not exists countries (
 	id int(11) NOT NULL auto_increment,
@@ -14,3 +15,16 @@ create table if not exists countries (
     update_at timestamp not null default current_timestamp on update current_timestamp,
     PRIMARY KEY(id)#索引 id never be same
 );
+INSERT INTO countries (
+
+            NAME,
+            description,
+            population
+        )values (
+            
+            'canada',
+            'very cold',
+            1234556
+        );
+
+select*from comp_1006_lesson_03.countries;

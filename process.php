@@ -1,32 +1,36 @@
 <?php
 
-    
+    $mysqli = mysqli_connect('localhost','root',null,'comp_1006_lesson_03');
+    var_dump($_POST);
 
-
-
-    //store the value into countries
-    $results = mysqli_query($mysqli,"
-        INSERT INTO countries (
-
-            NAME,
+    $res=mysqli_query($mysqli,"
+        insert into countries(
+            name,
             description,
             population
-        )
-         values(
-            
+
+
+
+        )values(
             '{$_POST['name']}',
-            '{$_POST['description']}',
-            {$_POST['population']}
+            '{$_POST['des']}',
+            {$_POST[pop]}
+
+
+
         )
+    
+    
+    
+    
     ");
 
-    if($results){
-        echo "The new country was created successfully";
+    if($res){
+        echo "we are successful";
     }else{
-        $error =mysqli_error($mysqli);
-        echo "There is an error";
-        echo "{$error}";
+        echo "There was an error creating the record:".mysqli_error($mysqli);
     }
+
 
 
 ?>

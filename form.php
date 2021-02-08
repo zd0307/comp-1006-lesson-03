@@ -15,12 +15,12 @@
         </div>
         <div>
             <label>Country description:</label>
-            <textarea name="description"></textarea>
+            <textarea name="des"></textarea>
         
         </div>
         <div>
             <label>Country population</label>
-            <input type="number" name="population">
+            <input type="number" name="pop">
         
         </div> 
         <button>create</button>
